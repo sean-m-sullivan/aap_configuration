@@ -47,6 +47,7 @@
         cas_job_async_results_item: "{{ __gateway_organizations_job_async_results_item }}"
         cas_error_list_var_name: "aap_organizations_errors"
         __operation: "{{ operation_translate[__gateway_organizations_job_async_results_item.state | default(platform_state) | default('present')] }}"
+        cas_object_message: "Organization: {{__gateway_organizations_job_async_results_item.__gateway_organization_item.name}}"
 
     - name: Organizations | Controller Configuration
       ansible.controller.organization:
